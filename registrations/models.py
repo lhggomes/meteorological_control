@@ -9,6 +9,3 @@ class Target(models.Model):
 
     def __str__(self):
         return f'{self.name} -  @{self.longitude}, {self.latitude}z'
-
-
-
