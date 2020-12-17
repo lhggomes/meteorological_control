@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pages.apps.PagesConfig',
+    'registrations.apps.RegistrationsConfig',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +77,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'met_controller',
-        'USER': 'postgree',
-        'PASSWORD': 'postgree',
+        'USER': 'aperam',
+        'PASSWORD': 'aperam',
         'HOST': '10.247.234.249',
         'PORT': '5432'
 
