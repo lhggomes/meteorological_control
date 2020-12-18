@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-    <title>Página Inicial :: Mapas</title>
+    <title> Target :: Mapas</title>
 {% endblock %}
 
 {% block content %}
@@ -25,13 +25,6 @@
                         <td>{{ target.latitude }}</td>
                         <td>{{ target.longitude }}</td>
                         <td>{{ target.exp_date }}</td>
-
-                        <td>
-                            <a href="{% url 'editar-vaga' vaga.pk %}" class="icon-fixed-width icon-pencil" title="Editar"></a>
-                            <a href="{% url 'excluir-vaga' vaga.pk %}" class="icon-fixed-width icon-trash" title="Excluir"> </a>
-                            <a href="{% url 'listar-cand-vagas' vaga.pk %}" class="icon-fixed-width icon-book" title="Relatorios"></a>
-
-                        </td>
 
                     </tr>
                 {% empty %}
