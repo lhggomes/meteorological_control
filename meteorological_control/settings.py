@@ -38,9 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pages.apps.PagesConfig',
     'registrations.apps.RegistrationsConfig',
-    'crispy_forms'
+    'django_forms_bootstrap',
 ]
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -80,8 +79,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'met_controller',
-        'USER': 'aperam',
-        'PASSWORD': 'aperam',
+        'USER': 'lucas',
+        'PASSWORD': 'lucas',
         'HOST': '10.247.234.249',
         'PORT': '5432'
 
