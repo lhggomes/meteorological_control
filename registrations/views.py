@@ -1,4 +1,5 @@
-from django.views.generic import CreateView
+from django.views.generic.edit import CreateView
+from django.views.generic.list import ListView
 from django.urls import reverse_lazy
 from .models import Target
 
@@ -12,3 +13,8 @@ class TargetCrateView(CreateView):
 
     def form_invalid(self, form):
         return super().form_invalid(form)
+
+
+class TargetList(ListView):
+    model = Target
+    template_name = 'registrations/list/target-list.html'

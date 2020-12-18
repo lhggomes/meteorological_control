@@ -1,0 +1,46 @@
+{% extends 'pages/model.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Página Inicial :: Mapas</title>
+{% endblock %}
+
+{% block content %}
+    <section id="hero" class="main">
+        <h3>Lista de Apontamentos Cadastrados</h3>
+        <hr>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tr>
+                    <th>Nome</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Data Expiração</th>
+
+                    <th>Opções</th>
+                </tr>
+                {% for target in object_list %}
+                    <tr>
+                        <td>{{ target.name }}</td>
+                        <td>{{ target.latitude }}</td>
+                        <td>{{ target.longitude }}</td>
+                        <td>{{ target.exp_date }}</td>
+
+                        <td>
+                            <a href="{% url 'editar-vaga' vaga.pk %}" class="icon-fixed-width icon-pencil" title="Editar"></a>
+                            <a href="{% url 'excluir-vaga' vaga.pk %}" class="icon-fixed-width icon-trash" title="Excluir"> </a>
+                            <a href="{% url 'listar-cand-vagas' vaga.pk %}" class="icon-fixed-width icon-book" title="Relatorios"></a>
+
+                        </td>
+
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="6">Nenhum vaga registrada</td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+    </section>
+{% endblock %}
