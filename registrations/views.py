@@ -7,7 +7,7 @@ from .models import Target
 class TargetCrateView(CreateView):
     model = Target
     fields = ['name', 'latitude', 'longitude', 'exp_date']
-    template_name = '../registrations/templates/registrations/targets/target.html'
+    template_name = 'registrations/targets/target.html'
     success_message = 'Target Successfully created'
     success_url = reverse_lazy('index')
 
